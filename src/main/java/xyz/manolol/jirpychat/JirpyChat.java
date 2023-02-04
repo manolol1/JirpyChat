@@ -1,34 +1,50 @@
 package xyz.manolol.jirpychat;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import xyz.manolol.jirpychat.helpers.ConsoleColors;
-import xyz.manolol.jirpychat.helpers.Padding;
 
-import xyz.manolol.jirpychat.Commands.Help;
+import xyz.manolol.jirpychat.commands.Help;
+import xyz.manolol.jirpychat.commands.GetTime;
+import xyz.manolol.jirpychat.commands.AgeCalc;
+import xyz.manolol.jirpychat.commands.Command;
 
 public class JirpyChat {
-
+    public static ArrayList<Command> commands;
+    
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
+        commands = new ArrayList<Command>();
+        commands.add(new AgeCalc());
+        commands.add(new Help());
+        commands.add(new GetTime("getTime"));
+        commands.add(new GetTime("What time is it?"));
         
-        System.out.println(ConsoleColors.CYAN + "Hello! I'm JirpyChat. Type \"help\" for a list of all questions and commands!" + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.CYAN + ">Hello! I'm JirpyChat. Type \"help\" for a list of all questions and commands!" + ConsoleColors.RESET);
         
         while(true){
             try{
-                System.out.println("Ask something!");
+                System.out.println(ConsoleColors.CYAN_BOLD + ">Ask something!" + ConsoleColors.RESET);
                 String c = s.nextLine();
                 
-                if(c.equalsIgnoreCase("help")){
-                    Help.help();
-                }
-                else if(c.equalsIgnoreCase("")){
-                    
-                }
+                runCmd(c);
+                
             } catch(Exception e){
-                System.out.println(ConsoleColors.RED_BOLD + "An error occured. Please check your input and try again!\nDetails:\n" + ConsoleColors.RED + e + ConsoleColors.RESET);
+                System.out.println(ConsoleColors.RED_BOLD + ">An error occured. Please check your input and try again!\nDetails:\n" + ConsoleColors.RED + e + ConsoleColors.RESET);
                 s.nextLine();
             }
         }
+    }
+    
+    public static void runCmd(String c){
+        for(Command cmd : commands){
+            if(cmd.getName().equalsIgnoreCase(c)){
+                cmd.run();
+                return;
+            }
+        }
+        
+        System.out.println(ConsoleColors.RED_BOLD + ">Sorry, I don't know that." + ConsoleColors.RED + " Type \"Help\" for a list of all questions and commands!" + ConsoleColors.RESET);
     }
 }
