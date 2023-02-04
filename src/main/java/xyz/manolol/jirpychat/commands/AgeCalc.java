@@ -5,6 +5,12 @@ import java.time.Period;
 import java.util.Scanner;
 
 public class AgeCalc extends Command{
+    public String commandName;
+    
+    public AgeCalc(String commandName){
+        this.commandName = commandName;
+    }
+    
     @Override
     public void run(){
         Scanner s = new Scanner(System.in);
@@ -23,8 +29,9 @@ public class AgeCalc extends Command{
 
         System.out.println("You are " + years + " years, " + months + " months and " + days + " days old.");
     }
-        @Override
+    
+    @Override
     public String getName() {
-        return "agecalc";
+        return commandName;
     }
 }

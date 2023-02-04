@@ -15,9 +15,12 @@ public class JirpyChat {
     
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
+        
         commands = new ArrayList<Command>();
-        commands.add(new AgeCalc());
-        commands.add(new Help());
+        
+        // list of all commands
+        commands.add(new AgeCalc("AgeCalc"));
+        commands.add(new Help("help"));
         commands.add(new GetTime("getTime"));
         commands.add(new GetTime("What time is it?"));
         
