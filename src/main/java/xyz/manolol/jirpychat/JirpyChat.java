@@ -8,6 +8,7 @@ import xyz.manolol.jirpychat.helpers.ConsoleColors;
 import xyz.manolol.jirpychat.commands.Help;
 import xyz.manolol.jirpychat.commands.GetTime;
 import xyz.manolol.jirpychat.commands.AgeCalc;
+import xyz.manolol.jirpychat.commands.Exit;
 import xyz.manolol.jirpychat.commands.Command;
 
 public class JirpyChat {
@@ -23,6 +24,7 @@ public class JirpyChat {
         commands.add(new Help("help"));
         commands.add(new GetTime("getTime"));
         commands.add(new GetTime("What time is it?"));
+        commands.add(new Exit("exit"));
         
         System.out.println(ConsoleColors.CYAN + ">Hello! I'm JirpyChat. Type \"help\" for a list of all questions and commands!" + ConsoleColors.RESET);
         
