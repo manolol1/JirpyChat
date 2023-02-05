@@ -1,1 +1,10 @@
+xyz/manolol/jirpychat/commands/Clear.class
+xyz/manolol/jirpychat/commands/CountDown.class
+xyz/manolol/jirpychat/commands/Exit.class
+xyz/manolol/jirpychat/commands/AgeCalc.class
+xyz/manolol/jirpychat/helpers/Padding.class
+xyz/manolol/jirpychat/helpers/ConsoleColors.class
 xyz/manolol/jirpychat/JirpyChat.class
+xyz/manolol/jirpychat/commands/Help.class
+xyz/manolol/jirpychat/commands/Command.class
+xyz/manolol/jirpychat/commands/GetTime.class

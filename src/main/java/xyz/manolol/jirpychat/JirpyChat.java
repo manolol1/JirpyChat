@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import xyz.manolol.jirpychat.helpers.ConsoleColors;
-
+import xyz.manolol.jirpychat.commands.Command;
 import xyz.manolol.jirpychat.commands.Help;
-import xyz.manolol.jirpychat.commands.GetTime;
-import xyz.manolol.jirpychat.commands.AgeCalc;
 import xyz.manolol.jirpychat.commands.Exit;
 import xyz.manolol.jirpychat.commands.Clear;
-import xyz.manolol.jirpychat.commands.Command;
+import xyz.manolol.jirpychat.commands.GetTime;
+import xyz.manolol.jirpychat.commands.AgeCalc;
+import xyz.manolol.jirpychat.commands.CountDown;
 
 public class JirpyChat {
     public static ArrayList<Command> commands;
@@ -20,13 +20,14 @@ public class JirpyChat {
         
         commands = new ArrayList<Command>();
         
-        // list of all commands
-        commands.add(new AgeCalc("AgeCalc"));
         commands.add(new Help("help"));
-        commands.add(new GetTime("getTime"));
-        commands.add(new GetTime("What time is it?"));
         commands.add(new Exit("exit"));
         commands.add(new Clear("clear"));
+        commands.add(new GetTime("GetTime"));
+        commands.add(new GetTime("What time is it?"));
+        commands.add(new AgeCalc("AgeCalc"));
+        commands.add(new CountDown("countdown"));
+        
         
         System.out.println(ConsoleColors.CYAN + ">Hello! I'm JirpyChat. Type \"help\" for a list of all questions and commands!" + ConsoleColors.RESET);
         

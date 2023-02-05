@@ -2,6 +2,7 @@
 /home/mario/Documents/GitHub/JirpyChat/src/main/java/xyz/manolol/jirpychat/commands/Clear.java
 /home/mario/Documents/GitHub/JirpyChat/src/main/java/xyz/manolol/jirpychat/commands/Exit.java
 /home/mario/Documents/GitHub/JirpyChat/src/main/java/xyz/manolol/jirpychat/commands/GetTime.java
+/home/mario/Documents/GitHub/JirpyChat/src/main/java/xyz/manolol/jirpychat/commands/CountDown.java
 /home/mario/Documents/GitHub/JirpyChat/src/main/java/xyz/manolol/jirpychat/JirpyChat.java
 /home/mario/Documents/GitHub/JirpyChat/src/main/java/xyz/manolol/jirpychat/commands/Help.java
 /home/mario/Documents/GitHub/JirpyChat/src/main/java/xyz/manolol/jirpychat/helpers/ConsoleColors.java
