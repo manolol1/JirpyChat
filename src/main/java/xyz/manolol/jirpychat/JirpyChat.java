@@ -10,6 +10,7 @@ import xyz.manolol.jirpychat.commands.Exit;
 import xyz.manolol.jirpychat.commands.Clear;
 import xyz.manolol.jirpychat.commands.GetTime;
 import xyz.manolol.jirpychat.commands.AgeCalc;
+import xyz.manolol.jirpychat.commands.Calculate;
 import xyz.manolol.jirpychat.commands.CountDown;
 
 public class JirpyChat {
@@ -26,6 +27,8 @@ public class JirpyChat {
         commands.add(new GetTime("GetTime"));
         commands.add(new GetTime("What time is it?"));
         commands.add(new AgeCalc("AgeCalc"));
+        commands.add(new Calculate("calculate"));
+        commands.add(new Calculate("calc"));
         commands.add(new CountDown("countdown"));
         
         

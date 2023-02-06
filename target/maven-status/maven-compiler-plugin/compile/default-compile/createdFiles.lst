@@ -1,5 +1,6 @@
 xyz/manolol/jirpychat/commands/Clear.class
 xyz/manolol/jirpychat/commands/CountDown.class
+xyz/manolol/jirpychat/commands/Calculate.class
 xyz/manolol/jirpychat/commands/Exit.class
 xyz/manolol/jirpychat/commands/AgeCalc.class
 xyz/manolol/jirpychat/helpers/Padding.class
